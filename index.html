@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keyword" content="coffee, 휴식, 편안함">
+        <meta name="description" content="내일을 위한 오늘의 휴식을 줍니다.">
+        <meta name="author" content="ezen">
+        <meta property="og:type" content="html">
+        <meta property="og:title" content="coffee Palace">
+        <meta property="og:description" content="내일을 위한 오늘의 휴식을 줍니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <title>coffee</title>
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/common.css">
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/scroll-ani.js"></script>
+        <style>
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .swiper-pagination-bullet{
+                width:10px;
+                height:10px;
+                background-color:white;
+                opacity:1;
+            }
+            .swiper-pagination-bullet-active{
+                width:30px;
+                background-color:red;
+                opacity:1;
+                border-radius:15px;
+
+            }
+            .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+            .swiper-button-prev:after{
+                color:white;
+                font-size:3rem;
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div class="login-modal">
+            <div class="modal-back"></div>
+            <div class="login-modal-body">
+                <button class="modal-close">X</button>
+                <h2 class="login-title">로그인</h2>
+                <div class="login-wrap">
+                    <div class="login-line">
+                        <div class="circle">!</div>
+                    </div>
+                    <p>
+                        가입하신 아이디와 비밀번호를 입력하세요<br>
+                        비밀번호는 대소문자를 구분합니다.
+                    </p>
+                    <form action="#" class="login-form">
+                        <div class="id">
+                            <input type="text" name="id" placeholder="아이디 입력" maxlength="12" minlength="4">
+                        </div>
+                        <div class="pass">
+                            <input type="password" name="psw" placeholder="비밀번호 입력" maxlength="16" minlength="8">
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="chk" checked ><label for="chk"></label>아이디 저장
+                        </div>
+                        <div class="login-bt">
+                            <input type="submit" name="login-bt" value="로그인">
+                        </div>
+                        <div class="bt-group">
+                            <a href="member.html">회원가입</a> |
+                            <a href="#">아이디 찾기</a> |
+                            <a href="#">비밀번호 재설정</a>
+                        </div>
+                        <button class="naver">naver</button>
+                        <button class="kakao">카카오 로그인</button>
+                        <button class="face">페이스북</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="header-position">
+            <header>
+                <div id="header-container">
+                    <h1>
+                        <a href="index.html">
+                            <img src="./images/SC-logo.png" alt="coffee logo">
+                        </a>
+                    </h1>
+                    <nav id="desk-nav">
+                        <div class="first">
+                            <a href="brand.html">브랜드 소개</a>
+                            <div class="drop-down">
+                                <a href="brand.html">브랜드 소개</a>
+                                <a href="brand.html">오시는 길</a>
+                            </div>
+                        </div>
+                        <div class="first">
+                            <a href="#">메뉴</a>
+                            <div class="drop-down">
+                                <a href="#">커피</a>
+                                <a href="#">음료</a>
+                                <a href="#">쉐이크</a>
+                                <a href="#">디저트</a>
+                                <a href="#">견과류</a>
+                                <a href="#">굿즈</a>
+                            </div>
+                        </div>
+                        <div class="first">
+                            <a href="#">가맹소개</a>
+                            <div class="drop-down">
+                                <a href="#">가맹문의</a>
+                                <a href="#">사업소개</a>
+                                <a href="#">온라인 상담신청</a>
+                            </div>
+                        </div>
+                        <div class="first">
+                            <a href="#">컴뮤니티</a>
+                            <div class="drop-down">
+                                <a href="#">공지사항</a>
+                                <a href="#">묻고답하기</a>
+                                <a href="#">자주묻는 질문</a>
+                                <a href="#">고객상담</a>
+                            </div>
+                        </div>
+                        <div class="first">
+                            <a href="#">매장현황</a>
+                        </div>
+                        <div class="full-back">
+                            &nbsp;
+                        </div>
+                    </nav>
+                    <div id="sns-g">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </div>
+                    <div id="login-group">
+                        <a href="login.html">로그인</a> |
+                        <a href="member.html">회원가입</a> |
+                        <a href="#">마이페이지</a>
+                    </div>
+                    <nav id="mobile-nav">
+                        <button class="fa fa-bars m-open"></button>
+                        <div class="mobile-content">
+                            <div class="mobile-body">
+                                <button class="m-close">X</button>
+                                <div class="mobile-menu">
+                                    <div class="menu-g">
+                                        <a href="#">브랜드 소개<span class="fa fa-angle-right arrow"></span></a>
+                                        <div class="m-drop-down">
+                                            <a href="brand.html">브렌드 소개</a>
+                                            <a href="brand.html">오시는 길</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-g">
+                                        <a href="#">메뉴<span class="fa fa-angle-right arrow"></span></a>
+                                        <div class="m-drop-down">
+                                            <a href="#">커피</a>
+                                            <a href="#">음료</a>
+                                            <a href="#">쉐이크</a>
+                                            <a href="#">디저트</a>
+                                            <a href="#">견과류</a>
+                                            <a href="#">굿즈</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-g">
+                                        <a href="#">가맹소개<span class="fa fa-angle-right arrow"></span></a>
+                                        <div class="m-drop-down">
+                                            <a href="#">가맹문의</a>
+                                            <a href="#">사업소개</a>
+                                            <a href="#">온라인 상담신청</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-g">
+                                        <a href="#">컴뮤니티<span class="fa fa-angle-right arrow"></span></a>
+                                        <div class="m-drop-down">
+                                            <a href="#">공지사항</a>
+                                            <a href="#">묻고답하기</a>
+                                            <a href="#">자주묻는 질문</a>
+                                            <a href="#">고객상담</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-g">
+                                        <a href="#">브랜드 소개<span class="fa fa-angle-right arrow"></span></a>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="m-login-group">
+                                    <a href="login.html">로그인</a>
+                                    <a href="member.html">회원가입</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+            </header>
+        </div>
+        <section id="body-container">
+            <div class="main-content-wrap ">
+                <video  autoplay muted loop>
+                    <source src="./video/coffee.mp4" type="video/mp4">
+                </video>
+                <div class="main-content">
+                    <div class="title-wrap">
+                        <h2>프렌차이즈 대표 Tower</h2>
+                        <p>스페셜 블랜딩의 대표</p>
+                    </div>
+                    <div class="content-box">
+                        <div>
+                            <h3>9 <span>년</span></h3>
+                            <p>함께한 시간</p>
+                        </div>
+                        <div>
+                            <h3>2,300 <span>개</span></h3>
+                            <p>가맹점 수</p>
+                        </div>
+                        <div>
+                            <h3>15,000 <span>명</span></h3>
+                            <p>TowerPalace 앱 사용</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-banner content-ani">
+                <h2 class="title-ani2">타이틀</h2>
+                <div class="main-banner-img">
+                    <img src="./images/coffe-banner1.jpg" alt="000커피">
+                </div>
+            </div>
+            <div class="main-banner-sliding content-ani">
+                <h2 class="new-title title-ani2">New Sliding</h2>
+                <div class="banner-sliding-wrap">
+                    <div class="sliding-group">
+                        <div>
+                            <img src="./images/new-s-1.jpg" alt="배너1">
+                        </div>
+                        <div>
+                            <a href="http://www.naver.com">
+                                <img src="./images/new-s-2.jpg" alt="배너2">
+                            </a>
+                        </div>
+                        <div>
+                            <img src="./images/new-s-3.jpg" alt="배너3">
+                        </div>
+                        <div>
+                            <img src="./images/new-s-4.jpg" alt="배너4">
+                        </div>
+                        <div>
+                            <img src="./images/new-s-5.jpg" alt="배너5">
+                        </div>
+                        <div>
+                            <img src="./images/new-s-6.jpg" alt="배너6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="brand-wrap content-ani">
+                <div class="brand-1">
+                    <h3>20년 이상의 노하우와 첨단 기술력</h3>
+                    <div class="brand-img">
+                        <a href="#">
+                            <img src="./images/new-s-3.jpg" alt="이미지 설명">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-1">
+                    <h3>국내 최대 규모 자체 로스팅 공장 및 설비 보유!</h3>
+                    <div class="brand-img">
+                        <a href="#">
+                            <img src="./images/new-s-4.jpg" alt="이미지 설명">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="store-wrap content-ani">
+                <h3>Tower Store</h3>
+                <p>늘 가까이 함께 하겠습니다.</p>
+                <a href="#">매장찾기</a>
+                <div class="store-group">
+                    <div class="store">
+                        <div class="store-img">
+                            <img src="./images/new-s-5.jpg" alt="설명">
+                        </div>
+                        <p> 부산 ooo점포</p>
+                    </div>
+                    <div class="store">
+                        <div class="store-img">
+                            <img src="./images/new-s-5.jpg" alt="설명">
+                        </div>
+                        <p> 부산 ooo점포</p>
+                    </div>
+                    <div class="store">
+                        <div class="store-img">
+                            <img src="./images/new-s-5.jpg" alt="설명">
+                        </div>
+                        <p> 부산 ooo점포</p>
+                    </div>
+                    <div class="store">
+                        <div class="store-img">
+                            <img src="./images/new-s-5.jpg" alt="설명">
+                        </div>
+                        <p> 부산 ooo점포</p>
+                    </div>
+                </div>
+            </div>
+            <div class="notic-wrap content-ani">
+                <div class="slider-wrap">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/new-s-1.jpg">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/new-s-2.jpg">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/new-s-3.jpg">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/new-s-4.jpg">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/new-s-5.jpg">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/new-s-6.jpg">
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-wrap content-ani">
+                브랜드 스토리
+            </div>
+        </section>
+        <footer>
+            푸터
+        </footer>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    },
+                    
+                    1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>
